@@ -6,6 +6,7 @@ import SearchParams from "./SearchParams";
 const App = () => {
   return (
     <div>
+      <React.StrictMode>
       <BrowserRouter>
         <header>
           <Link to="/">Adopt Me!</Link>
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/" element={<SearchParams />} />
         </Routes>
       </BrowserRouter>
+      </React.StrictMode>
     </div>
   );
 };
