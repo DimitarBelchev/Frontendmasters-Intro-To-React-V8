@@ -19,6 +19,7 @@ const App = () => {
   const adoptedPet = useState(null);
   return (
     <div>
+      <React.StrictMode>
       <BrowserRouter>
         <AdoptedPetContext.Provider value={adoptedPet}>
           <QueryClientProvider client={queryClient}>
@@ -32,6 +33,7 @@ const App = () => {
           </QueryClientProvider>
         </AdoptedPetContext.Provider>
       </BrowserRouter>
+      </React.StrictMode>
     </div>
   );
 };
